@@ -1,4 +1,4 @@
-#Sat Apr 25 20:50:00 IST 2020
-base.0=/home/elucidata/oneTapTheraphy/MyTestApp/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Fri May 01 11:50:46 IST 2020
+base.0=/home/elucidata/oneTapTheraphy/video-call-react-native/MyTestApp/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

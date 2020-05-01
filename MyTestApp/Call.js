@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 
 import {
     SafeAreaView,
@@ -16,19 +16,29 @@ import {
     DebugInstructions,
     ReloadInstructions,
   } from 'react-native/Libraries/NewAppScreen';
+  import {AuthService} from '../MyTestApp/videoCallComponent/services'
+  import Navigator from '../MyTestApp/videoCallComponent/navigator'
 
 
-  export function Call () {
-      return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text> Inside Call Screen</Text>
-                <Text> We will make an awesome call feature</Text>
-                <Button title = "Video Call Mayank" 
-                  color = 'blue' 
-                />
-                  <Button title = "Audio Call Mayank" 
-                  color = 'purple' 
-                 />
-            </View>
-      );
+  export default class Call extends Component () {
+    constructor(props) {
+      super(props);
+  
+      AuthService.init();
+    }
+    render = () => <Navigator />;
+
+      // return (
+      //       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      //           <Text> Inside Call Screen</Text>
+      //           <Text> We will make an awesome call feature</Text>
+      //           <Button title = "Video Call Mayank" 
+      //             color = 'blue' 
+      //           />
+      //             <Button title = "Audio Call Mayank" 
+      //             color = 'purple' 
+      //            />
+      //       </View>
+
+      // );
   }

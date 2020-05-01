@@ -3,16 +3,16 @@ import Toast from 'react-native-simple-toast';
 import ConnectyCube from 'react-native-connectycube';
 import InCallManager from 'react-native-incall-manager';
 import Sound from 'react-native-sound';
-import {users} from  '../videoCallComponent/config';
+import {users} from  '../config';
 
 export default class CallService  {
     static MEDIA_OPTIONS = {audio: true, video: {facingMode: 'user'}};
     _session = null;
     mediaDevices = [];
 
-    outgoingCall = new Sound(require('../assets/sound/dialing.mp3'));
-    incomingCall = new Sound(require('../assets/sound/calling.mp3'));
-    endCall = new Sound(require('../assets/sound/end_call.mp3'));
+    outgoingCall = new Sound(require('../../assets/sound/dialing.mp3'));
+    incomingCall = new Sound(require('../../assets/sound/calling.mp3'));
+    endCall = new Sound(require('../../assets/sound/end_call.mp3'));
 
     showToast = text => {
         const commonToast = Platform.OS === 'android' ? ToastAndroid : Toast;
